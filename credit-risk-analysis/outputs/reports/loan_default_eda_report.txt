@@ -1,0 +1,112 @@
+LOAN DEFAULT EXPLORATORY DATA ANALYSIS
+Dataset: C:\Users\upadh\Downloads\Project\credit-risk-analysis\data\featured\credit_risk_dataset_featured.csv
+Shape: (32416, 16)
+Overall default rate: 21.87%
+
+CORRELATION WITH LOAN DEFAULT (NUMERIC FEATURES)
+loan_to_income_ratio          0.386
+loan_percent_income           0.380
+loan_int_rate                 0.320
+residual_income_after_loan   -0.159
+person_income                -0.145
+loan_amnt                     0.106
+person_emp_length            -0.083
+person_age                   -0.023
+cb_person_cred_hist_length   -0.016
+
+NUMERIC FEATURE MEANS BY LOAN STATUS
+             person_age  person_income  person_emp_length  loan_amnt  loan_int_rate  loan_percent_income  cb_person_cred_hist_length  loan_to_income_ratio  residual_income_after_loan
+loan_status                                                                                                                                                                           
+non_default       27.82       70849.12               4.95    9240.16          10.49                 0.15                        5.85                  0.15                    61608.97
+default           27.47       49094.50               4.13   10857.48          12.88                 0.25                        5.68                  0.25                    38237.02
+
+DEFAULT RATE BY RISK LEVEL
+            customer_count  default_rate
+risk_level                              
+HIGH                  1729         67.26
+MEDIUM                7607         39.50
+LOW                  23080         12.66
+
+DEFAULT RATE BY PRIOR DEFAULT FLAG
+                           customer_count  default_rate
+cb_person_default_on_file                              
+Y                                    5730         37.87
+N                                   26686         18.43
+
+DEFAULT RATE BY LOAN GRADE
+            customer_count  default_rate
+loan_grade                              
+G                       64         98.44
+F                      241         70.54
+E                      963         64.49
+D                     3620         59.06
+C                     6438         20.75
+B                    10387         16.32
+A                    10703          9.96
+
+DEFAULT RATE BY LOAN INTENT
+                   customer_count  default_rate
+loan_intent                                    
+DEBTCONSOLIDATION            5189         28.68
+MEDICAL                      6042         26.76
+HOMEIMPROVEMENT              3594         26.15
+PERSONAL                     5498         19.90
+EDUCATION                    6411         17.25
+VENTURE                      5682         14.85
+
+DEFAULT RATE BY HOME OWNERSHIP
+                       customer_count  default_rate
+person_home_ownership                              
+RENT                            16378         31.61
+OTHER                             106         31.13
+MORTGAGE                        13369         12.62
+OWN                              2563          7.49
+
+DEFAULT RATE BY EMPLOYMENT TENURE BAND
+                        customer_count  default_rate
+employment_tenure_band                              
+NEW                               6983         27.87
+EARLY                            11024         23.32
+MID                              10799         18.34
+LONG                              3610         16.40
+
+DEFAULT RATE ACROSS NUMERIC QUARTILES
+loan_to_income_ratio quartiles
+                                   customer_count  default_rate
+bin                                                            
+(-0.00019999999999999998, 0.0897]            8113         11.06
+(0.0897, 0.148]                              8116         13.00
+(0.148, 0.229]                               8092         17.71
+(0.229, 0.83]                                8095         45.76
+
+loan_int_rate quartiles
+                customer_count  default_rate
+bin                                         
+(5.419, 8.49]             8410          9.63
+(8.49, 10.99]             9510         17.13
+(10.99, 13.11]            6401         18.59
+(13.11, 23.22]            8095         42.74
+
+person_income quartiles
+                      customer_count  default_rate
+bin                                               
+(3999.999, 38542.0]             8104         39.75
+(38542.0, 55000.0]              8188         21.41
+(55000.0, 79218.0]              8020         17.14
+(79218.0, 6000000.0]            8104          9.13
+
+person_emp_length quartiles
+               customer_count  default_rate
+bin                                        
+(-0.001, 2.0]           10815         27.12
+(2.0, 4.0]               7192         22.02
+(4.0, 7.0]               7764         18.77
+(7.0, 123.0]             6645         16.78
+
+cb_person_cred_hist_length quartiles
+              customer_count  default_rate
+bin                                       
+(1.999, 3.0]           11830         23.03
+(3.0, 4.0]              5881         22.41
+(4.0, 8.0]              7515         20.67
+(8.0, 30.0]             7190         20.76
